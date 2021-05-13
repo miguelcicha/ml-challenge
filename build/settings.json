@@ -1,0 +1,35 @@
+
+{
+    "config": {
+        "filter": "DevOps",
+        "db": {
+            "connection": {
+                "port": 5432,
+                "host": "127.0.0.1",
+                "database": "ml",
+                "user": "postgres",
+                "password": "postgres"
+            },
+            "options": {
+                "poolMaxSize": 5
+            }
+        },
+        "mail": {
+            "user": "",
+            "password": "",
+            "props": {
+                "mail.pop3.host": "pop.gmail.com",
+                "mail.pop3.port": "995",
+                "mail.pop3.starttls.enable": "true",
+                "mail.store.protocol": "pop3s", 
+                "mail.pop3.socketFactory.class": "javax.net.ssl.SSLSocketFactory",
+                "mail.pop3.socketFactory.fallback": "false",
+                "mail.pop3.socketFactory.port": "995"
+            }
+        }
+    },
+    "vertxOptions": {
+        "blockedThreadCheckInterval": 100000,
+        "workerPoolSize": 10 
+    }
+}

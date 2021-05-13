@@ -1,0 +1,20 @@
+#version: "3"
+
+services:
+  postgresql:
+    image: postgres:10-alpine
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ml
+
+
+  challenge:
+    build: .
+#    ports:
+#      - 8087:8087
+    network_mode: host
+    depends_on:
+      - postgresql

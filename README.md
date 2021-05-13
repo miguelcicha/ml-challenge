@@ -32,13 +32,14 @@ Se puede ejecutar con docker-compose o standarlone
 Editar Dockerfile la variable VERTICLE_INIT setear en:
 * POP.START
 * API.START
-El sistema iniciara segun el valor configurado en modo POP o API
+
+El sistema iniciará según el valor configurado en modo POP o API
 
 Para ejecutar con docker, debe dirigirse a la raiz del proyecto y ejecutar:
 
 `docker-compose up --build`
 
-Para limpiar la imagen y volver a ejecutar el proyecto en otro modo, ademas de editar la variable VERTICLE_INIT debera limpiar el docker para que se vuelva a construir.
+Para limpiar la imagen y volver a ejecutar el proyecto en otro modo, además de editar la variable VERTICLE_INIT debera limpiar el docker para que se vuelva a construir.
 
 
 ## Standarlone
@@ -51,6 +52,7 @@ Para limpiar la imagen y volver a ejecutar el proyecto en otro modo, ademas de e
 1) Ingresar a la carpeta build
 2) Editar archivo settings.json, attr config->db con los valores de su motor de base de datos, recuerde crear una base de datos (defecto : ml)
 3) Ingresar a la carpeta build y lanzar aplicación con : 
+
 Para modo API: `java -jar ml-1.0.0.jar API.START`
 Para modo POP: `java -jar ml-1.0.0.jar POP.START`
 
